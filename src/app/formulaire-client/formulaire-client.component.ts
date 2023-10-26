@@ -6,34 +6,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./formulaire-client.component.css']
 })
 export class FormulaireClientComponent {
-  client: any = {
-    prenom: '',
-    adresse: '',
-    cp: null,
-    ville: '',
-    email: '',
-    telephone: '',
-    civilite: '',
-    password: '',
-    login: '',
-    pays: ''
-  };
+  nom: string = '';
+  prenom: string = '';
+  adresse: string = '';
+  cp: number | null = null;
+  ville: string = '';
+  email: string = '';
+  telephone: string = '';
+  civilite: string = '';
+  password: string = '';
+  login: string = '';
+  pays: string = '';
 
   confirmationMessage: string = '';
-  nom : string = '';
 
   onSubmit() {
+    console.log('Nom:', this.nom);
     this.confirmationMessage = `Vous avez entré les informations suivantes :
+    
       Nom : ${this.nom}
-      Prénom : ${this.client.prenom}
-      Adresse : ${this.client.adresse}
-      Code postal : ${this.client.cp}
-      Ville : ${this.client.ville}
-      Email : ${this.client.email}
-      Téléphone : ${this.client.telephone}
-      Civilité : ${this.client.civilite}
-      Mot de passe : ${this.client.password}
-      Login : ${this.client.login}
-      Pays : ${this.client.pays}`;
+      Prénom : ${this.prenom}
+      Adresse : ${this.adresse}
+      Code postal : ${this.cp}
+      Ville : ${this.ville}
+      Email : ${this.email}
+      Téléphone : ${this.telephone}
+      Civilité : ${this.civilite}
+      Mot de passe : ${this.password}
+      Login : ${this.login}
+      Pays : ${this.pays}`;
   }
 }

@@ -1,76 +1,75 @@
 <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="nom">Nom</label>
-      <input type="text" id="nom" class="form-control" [(ngModel)]="nom" placeholder="Nom">
-    </div>
-
-    <br>
-    
-    <div class="form-group">
-      <label for="prenom">Prénom</label>
-      <input type="text" id="prenom" class="form-control" [(ngModel)]="client.prenom" placeholder="Prénom">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="adresse">Adresse</label>
-      <input type="text" id="adresse" class="form-control" [(ngModel)]="client.adresse" placeholder="Adresse">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="cp">Code postal</label>
-      <input type="number" id="cp" class="form-control" [(ngModel)]="client.cp" placeholder="Code postal">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="ville">Ville</label>
-      <input type="text" id="ville" class="form-control" [(ngModel)]="client.ville" placeholder="Ville">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="text" id="email" class="form-control" [(ngModel)]="client.email" placeholder="Email">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="telephone">Téléphone</label>
-      <input type="text" id="telephone" class="form-control" [(ngModel)]="client.telephone" placeholder="Téléphone">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="civilite">Civilité</label>
-      <input type="text" id="civilite" class="form-control" [(ngModel)]="client.civilite" placeholder="Civilité">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="password">Mot de passe</label>
-      <input type="password" id="password" class="form-control" [(ngModel)]="client.password" placeholder="Mot de passe">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="login">Login</label>
-      <input type="text" id="login" class="form-control" [(ngModel)]="client.login" placeholder="Login">
-    </div>
-    <br>
-    
-    <div class="form-group">
-      <label for="pays">Pays</label>
-      <input type="text" id="pays" class="form-control" [(ngModel)]="client.pays" placeholder="Pays">
-    </div>
-    <br>
-    
-    <button type="submit" class="btn btn-primary">Valider</button>
-  </form>
-
-  <div *ngIf="confirmationMessage">
-    <h2>Confirmation des données :</h2>
-    <p>{{ confirmationMessage }}</p>
+  <div class="form-group">
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" class="form-control" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}" placeholder="Nom">
   </div>
-  
+
+  <br>
+
+  <div class="form-group">
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" class="form-control" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}" placeholder="Prénom">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" class="form-control" [(ngModel)]="adresse" [ngModelOptions]="{standalone: true}" placeholder="Adresse">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="cp">Code postal</label>
+    <input type="number" id="cp" class="form-control" [(ngModel)]="cp" [ngModelOptions]="{standalone: true}" placeholder="Code postal">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="ville">Ville</label>
+    <input type="text" id="ville" class="form-control" [(ngModel)]="ville" placeholder="Ville">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" id="email" class="form-control" [(ngModel)]="email" placeholder="Email">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="telephone">Téléphone</label>
+    <input type="text" id="telephone" class="form-control" [(ngModel)]="telephone" placeholder="Téléphone">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="civilite">Civilité</label>
+    <input type="text" id="civilite" class="form-control" [(ngModel)]="civilite" placeholder="Civilité">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="password">Mot de passe</label>
+    <input type="password" id="password" class="form-control" [(ngModel)]="password" placeholder="Mot de passe">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="login">Login</label>
+    <input type="text" id="login" class="form-control" [(ngModel)]="login" placeholder="Login">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="pays">Pays</label>
+    <input type="text" id="pays" class="form-control" [(ngModel)]="pays" placeholder="Pays">
+  </div>
+  <br>
+
+  <button type="submit" class="btn btn-primary">Valider</button>
+</form>
+
+<div *ngIf="confirmationMessage">
+  <h2>Confirmation des données :</h2>
+  <p>{{ confirmationMessage }}</p>
+</div>
